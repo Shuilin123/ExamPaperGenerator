@@ -1205,29 +1205,9 @@ class TemplateDesignPanel:
             tex_file.parent.mkdir(parents=True, exist_ok=True)
             with open(tex_file, "w", encoding="utf-8") as f:
                 f.write(compilable)
-
-            env = os.environ.copy()
-            bundle = RESOURCE_DIR / "tectonic_bundle"
-            if bundle.exists():
-                env["TECTONIC_BUNDLE_DIR"] = str(bundle)
-                env["TECTONIC_CACHE_DIR"] = str(bundle)
-            env["TECTONIC_OFFLINE"] = "1"
-            env["TECTONIC_NO_DOWNLOAD"] = "1"
-
-
-            result = subprocess.run(
-                [str(LATEX_PATH), "template_preview.tex"],
-                cwd=TEMP_DIR,
-                capture_output=True,
-                text=False,
-                env=env,
-                creationflags=subprocess.CREATE_NO_WINDOW,
-                timeout=120
-            )
-            stdout = result.stdout.decode("utf-8", errors="ignore")
-            stderr = result.stderr.decode("utf-8", errors="ignore")
+            isSuccess,_=self.pdf_generator.generate_pdf(compilable,tex_file)
             pdf_path = TEMP_DIR / "template_preview.pdf"
-            if pdf_path.exists():
+            if isSuccess:
                 self._pdf_path = pdf_path
                 success = True
             else:
