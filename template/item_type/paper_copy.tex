@@ -1,0 +1,96 @@
+\documentclass[12pt,a3paper,twocolumn,landscape]{ctexart}
+\usepackage[margin=1.5cm]{geometry}
+% 页面统一设置（无重复冲突）
+\geometry{
+    left=3.0cm,
+    right=1.5cm,
+    top=2.0cm,
+    bottom=2.0cm,
+    columnsep=1.0cm
+}
+% 基础宏包
+\usepackage{amsmath,amssymb,bm}
+\usepackage{esint}
+\usepackage{tikz}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{ctexcap}
+%\usepackage{everypage}
+
+% 试卷核心信息
+\newcommand{\miji}{★ 测试密 ★}
+\newcommand{\subTitle}{sub_title_x}
+\newcommand{\mainTitle}{main_title_x}
+\newcommand{\examtime}{exam_time_x}
+\newcommand{\examscore}{score_x}
+
+% 标准密封线（固定左2.8cm，信息区在右侧安全区）
+\def\sealline{%
+\begin{tikzpicture}[remember picture,overlay]
+    \draw[black,line width=0.8pt,dash pattern=on 4pt off 2pt] 
+        ([xshift=2.2cm]current page.north west) -- ([xshift=2.2cm]current page.south west);
+    \node[rotate=90,anchor=south,font=\small\bfseries,inner sep=1pt] 
+        at ([xshift=2cm,yshift=-0.2cm]current page.west) {- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ※ ※密封线内不准答题※ ※ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - };
+     \draw[black,line width=0.8pt,dash pattern=on 4pt off 2pt] 
+        ([xshift=1.5 cm]current page.north west) -- ([xshift=1.5 cm]current page.south west);
+    \node[rotate=90,anchor=south,font=\small\bfseries,inner sep=0pt] 
+        at ([xshift=1cm]current page.west) {学院 \underline{\hspace{3cm}} \quad 专业 \underline{\hspace{3cm}} \quad 考生号 \underline{\hspace{3cm}}};
+\end{tikzpicture}%
+}
+\def\seallinex{%
+\begin{tikzpicture}[remember picture,overlay]
+    \draw[black,line width=0.8pt,dash pattern=on 4pt off 2pt] 
+        ([xshift=2.2cm]current page.north west) -- ([xshift=2.2cm]current page.south west);
+    \node[rotate=90,anchor=south,font=\small\bfseries,inner sep=1pt] 
+        at ([xshift=2cm,yshift=-0.2cm]current page.west) {- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ※ ※密封线内不准答题※ ※ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - };
+     \draw[black,line width=0.8pt,dash pattern=on 4pt off 2pt] 
+        ([xshift=1.5cm]current page.north west) -- ([xshift=1.5cm]current page.south west);
+\end{tikzpicture}%
+}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \miji \quad 启用前 \seallinex}
+\rhead{\small 第 \thepage 页 / 共 \pageref{LastPage} 页}
+\renewcommand{\headrulewidth}{0.5pt}
+\setlist[enumerate]{font=\bfseries,leftmargin=*,itemsep=8pt,parsep=4pt,topsep=6pt}
+
+\begin{document}
+\sealline
+% 试卷标题区
+\begin{center}
+    \textbf{\zihao{2} \mainTitle} \\
+    \vspace{5pt}
+    \textbf{\zihao{2} \subTitle} \\
+    \vspace{5pt}
+    \zihao{5} 考试时间：\examtime \quad 满分：\examscore \quad 考试形式：闭卷
+\end{center}
+% 总评分表
+\begin{center}
+\zihao{5}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    题型 & item_x_1 & item_x_2 & item_x_3 & item_x_4 & 总分 & 总分复核人 \\
+    \hline
+    满分值 & item_x_1_s分 & item_x_2_s分 & item_x_3_s分 & item_x_4_s分 & item_x_5_s分 & \multirow{2}{*}{} \\
+    \hline
+    实得分 & & & & & & \\
+    \hline
+    阅卷人 & & & & & & \\
+    \hline
+\end{tabular}
+\end{center}
+\hrule
+\vspace{8pt}
+% 答题说明
+\noindent\zihao{5}\textbf{答题说明：}
+1. 所有答案必须书写在试卷指定答题区域内，密封线内及超出答题区域的答案一律无效；
+2. 允许使用无存储功能的科学计算器，严禁携带任何电子通讯设备、电子资料及纸质参考资料；
+3. 答题请使用黑色签字笔，字迹工整，卷面整洁，草稿纸一律不得带入考场；
+4. 考试结束后，试卷与草稿纸一并交回，不得带离考场。
+\vspace{12pt}
+items_x
+\end{document}

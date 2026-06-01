@@ -1,0 +1,47 @@
+{
+  "data_file": "C:/Users/Administrator/Desktop/exam_maker/exam_maker_project/exam_maker_gui/data/数理样题.xlsx",
+  "tex_path": "./temp/paper.tex",
+  "exam_main": "2026年数据中国技能大赛",
+  "exam_sub": "网络安全与人工智能竞赛(虚构)",
+  "exam_time": 150,
+  "paper_template_path": "C:/Users/Administrator/Desktop/exam_maker/exam_maker_project/exam_maker_gui/template/item_type/template_20260520_212056.tex",
+  "option_separator": "$;$",
+  "item_info": [
+    {
+      "item_type": "单项选择题",
+      "item_count": 30,
+      "item_score": 1.0,
+      "bank_type": "单选题"
+    },
+    {
+      "item_type": "多项选择题",
+      "item_count": 0,
+      "item_score": 1.5,
+      "bank_type": "多选题"
+    },
+    {
+      "item_type": "判断题",
+      "item_count": 0,
+      "item_score": 0.5,
+      "bank_type": "判断题"
+    },
+    {
+      "item_type": "简答题",
+      "item_count": 15,
+      "item_score": 5.0,
+      "bank_type": "简答题"
+    },
+    {
+      "item_type": "计算题",
+      "item_count": 5,
+      "item_score": 15.0,
+      "bank_type": "计算题"
+    }
+  ],
+  "item_instructions": {
+    "单项选择题": "每小题给出的四个选项中，最多有一个选项符合题目要求。",
+    "多项选择题": "每小题给出的四个选项中，有多个选项符合题目要求，有错选、不选得0分。",
+    "简答题": "",
+    "判断题": "对下列命题进行判断，正确的在括号内打√，错误的打×。"
+  }
+}

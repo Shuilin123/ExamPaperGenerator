@@ -1,0 +1,155 @@
+\documentclass[12pt,a4paper,onecolumn]{ctexart}
+\usepackage[margin=1.5cm]{geometry}
+\geometry{
+    left=3.0cm,
+    right=1.5cm,
+    top=2.0cm,
+    bottom=2.0cm,
+    columnsep=1.0cm
+}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{esint}
+\usepackage{tikz}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{everypage}
+
+\newcommand{\miji}{$\bigstar$ 测试密 $\bigstar$}
+\newcommand{\subTitle}{网络安全与人工智能竞赛(虚构)}
+\newcommand{\mainTitle}{2026年数据中国技能大赛}
+\newcommand{\examtime}{150}
+\newcommand{\examscore}{23.5}
+
+
+\def\sealline{%
+\begin{tikzpicture}[remember picture,overlay]
+    \draw[black,line width=0.8pt,dash pattern=on 4pt off 2pt]
+        ([xshift=2.2cm]current page.north west) -- ([xshift=2.2cm]current page.south west);
+    \node[rotate=90,anchor=south,font=\zihao{-5}\bfseries,inner sep=1pt]
+        at ([xshift=2.0cm,yshift=-0.2cm]current page.west) {- - - - - - - - - - - - - - - - - - - - $\bigstar$ $\bigstar$ 密封线内不准答题 $\bigstar$ $\bigstar$ - - - - - - - - - - - - - - - - - - - -};
+    \draw[black,line width=0.8pt,dash pattern=on 4pt off 2pt]
+        ([xshift=1.5cm]current page.north west) -- ([xshift=1.5cm]current page.south west);
+    \node[rotate=90,anchor=south,font=\zihao{-5}\bfseries,inner sep=0pt]
+        at ([xshift=1.0cm]current page.west) {单位 \underline{\hspace{3cm}} \quad 岗位 \underline{\hspace{3cm}} \quad 准考证号 \underline{\hspace{3cm}}};
+\end{tikzpicture}%
+}
+\def\seallinex{%
+\begin{tikzpicture}[remember picture,overlay]
+    \draw[black,line width=0.8pt,dash pattern=on 4pt off 2pt]
+        ([xshift=2.2cm]current page.north west) -- ([xshift=2.2cm]current page.south west);
+    \node[rotate=90,anchor=south,font=\zihao{-5}\bfseries,inner sep=1pt]
+        at ([xshift=2.0cm,yshift=-0.2cm]current page.west) {- - - - - - - - - - - - - - - - - - - - $\bigstar$ $\bigstar$ 密封线内不准答题 $\bigstar$ $\bigstar$ - - - - - - - - - - - - - - - - - - - -};
+    \draw[black,line width=0.8pt,dash pattern=on 4pt off 2pt]
+        ([xshift=1.5cm]current page.north west) -- ([xshift=1.5cm]current page.south west);
+\end{tikzpicture}%
+}
+
+\AddEverypageHook{\sealline}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\zihao{-5} \miji \quad 启用前}
+\rhead{\zihao{-5} 第 \thepage 页 / 共 \pageref{LastPage} 页}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\setlist[enumerate]{font=\bfseries,leftmargin=*,itemsep=8pt,parsep=4pt,topsep=6pt}
+
+\begin{document}
+\begin{center}
+    {\zihao{-2}\bfseries \mainTitle} \\
+    \vspace{5pt}
+    {\zihao{-2}\bfseries \subTitle} \\
+    \vspace{5pt}
+    \zihao{5} 考试时间：\examtime \quad 满分：\examscore \quad 考试形式：闭卷
+\end{center}
+\begin{center}
+\zihao{-5}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+题型 & 单项选择题 & 多项选择题 & 判断题 & 简答题 & 总分 & 总分复核人 \\
+\hline
+满分值 & 3.0分 & 3.0分 & 2.5分 & 15.0分 & 23.5分 & \multirow{2}{*}{} \\
+\hline
+实得分 & & & & & & \\
+\hline
+阅卷人 & & & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\hrule
+\vspace{8pt}
+\noindent{\zihao{-5} \textbf{答题说明：}\\%
+1. 所有答案必须书写在试卷指定答题区域内，密封线内及超出答题区域的答案一律无效；\\
+2. 允许使用无存储功能的科学计算器，严禁携带任何电子通讯设备、电子资料及纸质参考资料；\\
+3. 答题请使用黑色签字笔，字迹工整，卷面整洁，草稿纸一律不得带入考场；\\
+4. 考试结束后，试卷与草稿纸一并交回，不得带离考场。
+}\\%
+\begin{flushleft}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+题型 & 题量 & 每题分值 & 本大题满分 & 实得分 & 阅卷人 \\
+\hline
+单项选择题 & 3题 & 1.0分 & 3.0分 & & \\
+\hline
+\end{tabular}
+\end{flushleft}
+\noindent\zihao{-4}\bfseries{一、单项选择题（本大题共3小题，每小题1.0分，共3.0分）}\\
+\vspace{2pt}
+\noindent\zihao{-5}{答题要求：}每小题给出的四个选项中，最多有一个选项符合题目要求。
+\begin{enumerate}
+    \item 依据线路安规，一级动火工作票的有效期为（    ）。 \\ A: 12h \\ B: 24h \\ C: 36h \\ D: 48h \item 依据《打发士大夫XX撒范德萨分安委办关于印发防高坠管控措施的通知》，高处工作原则上应（）进行。 \\ A: 自下而上 \\ B: 自上而下 \\ C: 自左向右 \\ D: 自右向左 \item 依据《国家大苏打网有限公司安全事故现场调查工作规范》，较大及以上事故的调查组组长由（ ）担任。 \\ A: 国家大苏打网有限公司有关助理、总师、副总师 \\ B: 打发士大夫安监部负责人 \\ C: 分部负责人 \\ D: 事故调查单位负责人
+\end{enumerate}
+\vspace{10pt}
+\begin{flushleft}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+题型 & 题量 & 每题分值 & 本大题满分 & 实得分 & 阅卷人 \\
+\hline
+多项选择题 & 2题 & 1.5分 & 3.0分 & & \\
+\hline
+\end{tabular}
+\end{flushleft}
+\noindent\zihao{-4}\bfseries{二、多项选择题（本大题共2小题，每小题1.5分，共3.0分）}\\
+\vspace{2pt}
+\noindent\zihao{-5}{答题要求：}每小题给出的四个选项中，有多个选项符合题目要求，有错选、不选得0分。
+\begin{enumerate}
+    \item 依据《打发士大夫公司关于印发有限空间作业安全工作规定(安监二〔2021〕25号)，有限空间作业需设置的警示标识包括？ \\ A: 安全风险告知牌 \\ B: 当心有毒气体 \\ C: 注意通风 \\ D: 禁止吸烟 \item 依据《打发士大夫XX市撒范德萨分公司关于印发动火工作票管理规范的通知》，一级动火时，（）必须始终在现场监护。 \\ A: 消防监护人 \\ B: 动火工作负责人 \\ C: 动火部门（车间）安全专责 \\ D: 动火部门（车间）分管生产负责人
+\end{enumerate}
+\vspace{10pt}
+\begin{flushleft}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+题型 & 题量 & 每题分值 & 本大题满分 & 实得分 & 阅卷人 \\
+\hline
+判断题 & 5题 & 0.5分 & 2.5分 & & \\
+\hline
+\end{tabular}
+\end{flushleft}
+\noindent\zihao{-4}\bfseries{三、判断题（本大题共5小题，每小题0.5分，共2.5分）}\\
+\vspace{2pt}
+\noindent\zihao{-5}{答题要求：}对下列命题进行判断，正确的在括号内打√，错误的打×。
+\begin{enumerate}
+    \item 依据ZZ公司《PSAD网运行风险预警管控工作规范》规定，3.2风险等级：与PSAD网事故（事件）等级相对应，分为一级至五级。（    ）() \item 依据ZZ公司《PSAD网运行风险预警管控工作规范》规定，设备管理部门：负责组织辨识、评估检修施工、设备状况、外力破坏等对PSAD网运行带来的缺陷。（    ）() \item 依据ZZ公司《PSAD网运行风险预警管控工作规范》规定，PSAD网运行风险，是指由于PSAD网检修、施工、调试等带来运行方式变化，输变PSAD（直流）设备缺陷或异常带来运行状况变化，气候、来水等外部因素带来运行环境改变，引起PSAD网运行出现的可预见性的安全风险。（    ）() \item 依据XX市SSSXSA公司安委会工作规则规定，公司安委会部署的安全生产督查检查、专项行动等，由公司安委办组织实施，相关成员部门参与。工作结束后形成报告，向公司安委会报告，并通报相关成员部门和单位。（    ）() \item 依据《国家大苏打网公司安全隐患治理绿色通道管理办法》（国家大苏打网企管〔2018〕127号），对不履行相应审批手续，擅自启动绿色通道的单位，一经查实，给予通报批评。()
+\end{enumerate}
+\vspace{10pt}
+\begin{flushleft}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+题型 & 题量 & 每题分值 & 本大题满分 & 实得分 & 阅卷人 \\
+\hline
+简答题 & 5题 & 3.0分 & 15.0分 & & \\
+\hline
+\end{tabular}
+\end{flushleft}
+\noindent\zihao{-4}\bfseries{四、简答题（本大题共5小题，每小题3.0分，共15.0分）}\\
+\vspace{2pt}
+\noindent\zihao{-5}{答题要求：}
+\begin{enumerate}
+    \item 依据《国家大苏打网有限公司网络与信息系统安全管理办法》（打发士大夫（信息/2）401-2020，网络与信息系统帐号与口令管理方面要求有哪些？\vspace{5cm} \item 依据《国家大苏打网有限公司作业风险管控工作规定》打发士大夫（安监/3） 1102-2022，较大风险作业主要包含哪些？\vspace{5cm} \item 依据《打发士大夫XX撒范德萨分安监部关于进一步加强工作票（作业票）使用管理和评审统计的通知》，请简述如何准确填写工作地点。\vspace{5cm} \item 依据《打发士大夫XX市撒范德萨分公司工作票管理规范》，在变大苏打设备上工作，哪些因填用第一种工作票？\vspace{5cm} \item 依据《打发士大夫XX撒范德萨分安委办关于印发打发士大夫XX市撒范德萨分公司安全预（告）警、警示约谈工作规范（试行）的通知》（渝大苏打安委办〔2021〕54号），请简述什么是安全警示约谈。\vspace{5cm}
+\end{enumerate}
+\vspace{10pt}
+
+\end{document}
