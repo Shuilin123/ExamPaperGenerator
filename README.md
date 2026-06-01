@@ -73,4 +73,4 @@ python exam_maker_gui.py
 
 ## 许可证
 
-© 2026 shuilin. All rights reserved.
+© 2026 shuilin123. All rights reserved.
