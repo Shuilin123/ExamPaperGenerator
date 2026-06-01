@@ -6,7 +6,7 @@
 |------|------|
 | `VALID_ZIHAO` | 合法中文字号集合（例如 `'-0'`、`'5'`、`'8'`） |
 | `DLL_AVAILABLE` | 当从 C 扩展 `.pyd` 或 `.dll` 加载时为 `True` |
-| `LATEX_PATH` | 可执行文件 `shuilin.exe`（tectonic）的路径 |
+| `LATEX_PATH` | 可执行文件 `shuilin.exe`的路径 |
 | `TEMP_DIR` | 编译输出的临时目录 |
 | `RESOURCE_DIR` | `.pyd` 或 `.dll` 所在目录 |
 
