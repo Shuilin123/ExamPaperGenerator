@@ -42,7 +42,7 @@ python exam_maker_gui.py
 
 - **GUI**: Python Tkinter / ttk
 - **数据读取**: pandas (Excel/CSV)
-- **LaTeX 编译**: Tectonic（通过 `template_builder.dll` C 扩展调用）
+- **LaTeX 编译**: 开源编译工具（通过 `template_builder.dll` C 扩展调用）
 - **模板引擎**: 自定义 C 扩展（`template_builder.dll`）+ LaTeX 片段
 
 ## 项目结构
