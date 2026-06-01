@@ -19,7 +19,7 @@ class AboutPanel:
 
         ttk.Label(about_frame, text="SGCC_Fj 试卷生成器", font=(UI_FONT, 14, 'bold'), foreground='#1a73e8').pack(pady=(0, 2))
         ttk.Label(about_frame, text="版本: v2.0.0", font=(UI_FONT, 9)).pack(pady=0)
-        ttk.Label(about_frame, text="问题反馈: 如使用过程中遇到问题和建议，请联系数字化办公室(liz5417@cq.sgcc.com.cn)",
+        ttk.Label(about_frame, text="问题反馈: 如使用过程中遇到问题和建议，请写在issue中",
                  font=(UI_FONT, 8), foreground='#666').pack(pady=0)
         ttk.Separator(about_frame, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=4)
         info_text = (
