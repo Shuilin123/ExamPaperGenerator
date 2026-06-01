@@ -17,7 +17,7 @@ class AboutPanel:
         about_frame = ttk.Frame(container)
         about_frame.grid(row=0, column=0, sticky='nsew', padx=10, pady=8)
 
-        ttk.Label(about_frame, text="SGCC_Fj 试卷生成器", font=(UI_FONT, 14, 'bold'), foreground='#1a73e8').pack(pady=(0, 2))
+        ttk.Label(about_frame, text="试卷生成器 2.0", font=(UI_FONT, 14, 'bold'), foreground='#1a73e8').pack(pady=(0, 2))
         ttk.Label(about_frame, text="版本: v2.0.0", font=(UI_FONT, 9)).pack(pady=0)
         ttk.Label(about_frame, text="问题反馈: 如使用过程中遇到问题和建议，请写在issue中",
                  font=(UI_FONT, 8), foreground='#666').pack(pady=0)
