@@ -6,8 +6,7 @@ import re
 import threading
 from datetime import datetime
 from pathlib import Path
-from utils import UI_FONT, TEMPLATE_DIR, TEMP_DIR, LATEX_PATH, RESOURCE_DIR, SCRIPT_DIR, TemplateBuilder
-
+from utils import UI_FONT, TEMPLATE_DIR, TEMP_DIR, LATEX_PATH, RESOURCE_DIR, SCRIPT_DIR, TemplateBuilder,PdfGenerator
 
 class TemplateDesignPanel:
     def __init__(self, parent, item_rows, exam_main=None, exam_sub=None, exam_time=None):
@@ -16,6 +15,7 @@ class TemplateDesignPanel:
         self.exam_main = exam_main
         self.exam_sub = exam_sub
         self.exam_time = exam_time
+        self.pdf_generator = PdfGenerator()
         self._raw_latex=None
         self._build()
 
