@@ -70,7 +70,9 @@ python exam_maker_gui.py
 ├── temp/                            # 编译输出目录
 └── APP.ico                          # 应用图标
 ```
-
+## 致谢
+Tectonic-typeseting
 ## 许可证
 
 © 2026 shuilin123. All rights reserved.
+
